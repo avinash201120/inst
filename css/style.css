@@ -94,3 +94,108 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+
+
+/* --- Responsive Enhancements --- */
+
+
+/* Responsive Containers */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Responsive Navigation */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  margin: 10px;
+}
+nav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  background-color: #003366;
+  border-radius: 5px;
+}
+nav a:hover {
+  background-color: #00509e;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+thead {
+  background-color: #003366;
+  color: #fff;
+}
+tbody tr:nth-child(even) {
+  background-color: #f4f6f9;
+}
+
+/* Responsive Layouts */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex, .row, .columns {
+    flex-direction: column !important;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  section, article {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  td::before {
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #333;
+  }
+}
